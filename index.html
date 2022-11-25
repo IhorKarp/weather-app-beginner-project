@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather app</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="searching-form">
+        <input
+          type="search"
+          class="search"
+          placeholder="  Enter City"
+          autocomplete="on"
+        />
+        <input id="submission" type="submit" value="🔍" />
+      </form>
+      <div class="weather-side">
+        <div class="weather-gradient"></div>
+        <div class="date-container">
+          <h2 class="date-dayname">Friday 15:15</h2>
+          <span class="date-day">11 Oct 2022</span
+          ><i class="location-icon" data-feather="map-pin"></i
+          ><span class="location">Odesa, UA</span>
+        </div>
+        <div class="weather-container">
+          <i class="weather-icon" data-feather="sun"></i>
+          <h1 class="weather-temp">
+            10
+          </h1>
+          <button type="button" id="h31">°C</button>
+          <button type="button" id="h32">°F</button>
+          <h3 class="weather-desc">Sunny</h3>
+        </div>
+      </div>
+      <div class="info-side">
+        <div class="today-info-container">
+          <div class="today-info">
+            <div class="precipitation">
+              <span class="title">PRECIPITATION</span
+              ><span class="value">0 %</span>
+              <div class="clear"></div>
+            </div>
+            <div class="humidity">
+              <span class="title">HUMIDITY</span><span class="value">34 %</span>
+              <div class="clear"></div>
+            </div>
+            <div class="wind">
+              <span class="title">WIND</span><span class="value">0 km/h</span>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="week-container">
+          <ul class="week-list">
+            <li class="active">
+              <i class="day-icon" data-feather="sun"></i
+              ><span class="day-name">Sat</span
+              ><span class="day-temp">9°C</span>
+            </li>
+            <li>
+              <i class="day-icon" data-feather="cloud"></i
+              ><span class="day-name">Sun</span
+              ><span class="day-temp">7°C</span>
+            </li>
+            <li>
+              <i class="day-icon" data-feather="cloud-snow"></i
+              ><span class="day-name">Mon</span
+              ><span class="day-temp">10°C</span>
+            </li>
+            <li>
+              <i class="day-icon" data-feather="cloud-rain"></i
+              ><span class="day-name">Tue</span
+              ><span class="day-temp">11°C</span>
+            </li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+        <div class="location-container">
+          <button class="location-button">
+            <i data-feather="map-pin"></i><span>Change location</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
