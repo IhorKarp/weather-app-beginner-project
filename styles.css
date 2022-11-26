@@ -293,3 +293,6 @@ body {
   background: none;
   border: none;
 }
+#country {
+  display: inline;
+}
