@@ -99,6 +99,18 @@ function show(event) {
   });
 }
 
+let button = document.querySelector(".search");
+   let value = capitalizeFirstLetter(button.value.toLowerCase());
+function searchForCity(value) {
+  let location = document.querySelector(".location");
+  location.innerHTML = `${value}`;
+  let keyApi = "1ee4264117b73d2263eecd562f31ef5c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&appid=${keyApi}`;
+  axios.get(apiUrl).then((response) => {
+    weather(response);
+  });
+}
+
 let search = document.querySelector(".searching-form");
 search.addEventListener("submit", show);
 
@@ -120,3 +132,5 @@ function showLocation(event) {
 
 let currentLocation = document.querySelector("#location-button");
 currentLocation.addEventListener("click", showLocation);
+
+searchForCity("London");
