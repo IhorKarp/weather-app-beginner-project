@@ -296,3 +296,14 @@ body {
 #country {
   display: inline;
 }
+.bottom {
+  position: relative;
+  top: 265px;
+  text-decoration: none;
+}
+.bottom-link {
+  text-decoration: none;
+}
+.bottom-link:hover {
+  color: darkorchid;
+}
