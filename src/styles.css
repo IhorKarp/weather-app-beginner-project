@@ -307,3 +307,9 @@ body {
 .bottom-link:hover {
   color: darkorchid;
 }
+
+#weather-icon {
+  position: relative;
+  right: 190px;
+  bottom: 115px;
+}

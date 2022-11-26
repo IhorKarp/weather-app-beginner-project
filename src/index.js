@@ -44,6 +44,11 @@ let year = newDate.getFullYear();
 date.innerHTML = `${dayNumber} ${month} ${year}`;
 
 function weather (response) {
+  let weatherIcon = document.querySelector("#icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
     let country = document.querySelector("#country");
     country.innerHTML = ", " + response.data.sys.country;
 
