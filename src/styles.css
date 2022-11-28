@@ -37,7 +37,7 @@ body {
   box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
   color: #ffffff;
   height: 430px;
-  max-width: 720px
+  max-width: 720px;
   position: absolute;
 }
 .search {
