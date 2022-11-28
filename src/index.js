@@ -52,7 +52,6 @@ function formatDay(timestamp) {
 
   return days[day];
 }
-
 function displayForecast(response) {
   let day = document.querySelectorAll("#day1 ,#day2 ,#day3 ,#day4 ");
   day[0].innerHTML = formatDay(response.data.daily[1].dt);
@@ -89,6 +88,47 @@ function displayForecast(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.daily[4].weather[0].icon}@2x.png`
   );
+
+  function formula(value) {
+    return value * (9 / 5) + 32;
+  }
+
+  function conversionToFahrenheit(event) {
+    event.preventDefault();
+    temp[0].innerHTML = `${Math.round(
+      formula(response.data.daily[1].temp.max)
+    )}° ${Math.round(formula(response.data.daily[1].temp.min))}°`;
+    temp[1].innerHTML = `${Math.round(
+      formula(response.data.daily[2].temp.max)
+    )}° ${Math.round(formula(response.data.daily[2].temp.min))}°`;
+    temp[2].innerHTML = `${Math.round(
+      formula(response.data.daily[3].temp.max)
+    )}° ${Math.round(formula(response.data.daily[3].temp.min))}°`;
+    temp[3].innerHTML = `${Math.round(
+      formula(response.data.daily[4].temp.max)
+    )}° ${Math.round(formula(response.data.daily[4].temp.min))}°`;
+  }
+  function conversionToCelsius(event) {
+    event.preventDefault();
+    temp[0].innerHTML = `${Math.round(
+      response.data.daily[1].temp.max
+    )}° ${Math.round(response.data.daily[1].temp.min)}°`;
+    temp[1].innerHTML = `${Math.round(
+      response.data.daily[2].temp.max
+    )}° ${Math.round(response.data.daily[2].temp.min)}°`;
+    temp[2].innerHTML = `${Math.round(
+      response.data.daily[3].temp.max
+    )}° ${Math.round(response.data.daily[3].temp.min)}°`;
+    temp[3].innerHTML = `${Math.round(
+      response.data.daily[4].temp.max
+    )}° ${Math.round(response.data.daily[4].temp.min)}°`;
+  }
+
+  let celciusButton = document.querySelector("#h31");
+  celciusButton.addEventListener("click", conversionToCelsius);
+  let fahrenheitButton = document.querySelector("#h32");
+  fahrenheitButton.addEventListener("click", conversionToFahrenheit);
+  console.log(response);
 }
 
 function getForecast(coordinates) {
@@ -125,6 +165,10 @@ function weather(response) {
 
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed) + "  km/h";
+
+  function formula(value) {
+    return value * (9 / 5) + 32;
+  }
 
   function conversionToFahrenheit(event) {
     event.preventDefault();

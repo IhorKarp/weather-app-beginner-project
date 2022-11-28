@@ -37,12 +37,12 @@ body {
   box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
   color: #ffffff;
   height: 430px;
-  max-width: 700px;
+  max-width: 800px;
   position: absolute;
 }
 .search {
   position: relative;
-  margin-left: 70px;
+  margin-left: 80px;
   margin-top: 15px;
   opacity: 0.7;
   border-radius: 25px;
@@ -51,6 +51,7 @@ body {
   padding: 6px 20px;
   font-size: 14px;
 }
+
 .weather-side {
   position: relative;
   height: 100%;
@@ -91,10 +92,12 @@ body {
   background: none;
   font-size: 30px;
   color: #fff;
-  padding: 10px 15px 10px 5px;
+  padding: 0px 15px 10px 5px;
+  position: fixed;
+  left: 120px;
 }
 #h31:hover {
-  font-size: 35px;
+  font-size: 40px;
   padding-right: 9px;
 }
 #h32 {
@@ -104,10 +107,11 @@ body {
   font-size: 30px;
   color: #fff;
   padding-left: 5px;
+  position: fixed;
+  left: 180px;
 }
 #h32:hover {
-  font-size: 35px;
-  padding: 10px;
+  font-size: 40px;
 }
 
 .date-container {
@@ -205,6 +209,7 @@ body {
   -o-transition: 200ms ease;
   transition: 200ms ease;
   border-radius: 10px;
+  width: 100px;
 }
 
 .week-list > li:hover {
