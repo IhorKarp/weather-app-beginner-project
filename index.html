@@ -9,7 +9,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link href="src/styles.css" rel="stylesheet"/>
+    <link href="src/styles.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
 
@@ -19,7 +19,7 @@
         <input
           type="search"
           class="search"
-          placeholder="  Enter City"
+          placeholder="  Enter City 😉"
           autocomplete="on"
         />
         <input id="submission" type="submit" value="🔍" />
@@ -27,20 +27,27 @@
       <div class="weather-side">
         <div class="weather-gradient"></div>
         <div class="date-container">
-          <h2 class="date-dayname">Friday 15:15</h2>
-          <span class="date-day">11 Oct 2022</span>
+          <h2 class="date-dayname"></h2>
+          <span class="date-day"></span>
           <i class="location-icon" data-feather="map-pin"></i>
-          <span class="location">Odesa,</span>
-          <h1 id="country">UA</h1>
+          <span class="location"></span>
+          <h1 id="country"></h1>
         </div>
         <div class="weather-container">
-          <i class="weather-icon" data-feather="sun"></i>
           <h1 class="weather-temp">
             10
           </h1>
           <button type="button" id="h31">°C</button>
           <button type="button" id="h32">°F</button>
-          <p class="weather-desc">Partly cloud</p>
+          <p class="weather-desc"></p>
+          <span id="weather-icon">
+            <img
+              id="icon"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather-icon"
+              width="65px"
+            />
+          </span>
         </div>
       </div>
       <div class="info-side">
@@ -65,25 +72,45 @@
         </div>
         <div class="week-container">
           <ul class="week-list">
-            <li class="active">
-              <i class="day-icon" data-feather="sun"></i
-              ><span class="day-name">Sat</span
-              ><span class="day-temp">9°C</span>
+            <li class="active" id="first-day">
+              <span id="day1" class="day-name">Sat</span>
+              <img
+                id="img1"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="weather-icon"
+                width="50px"
+              />
+              <span id="temp1" class="day-temp">9° 7°</span>
             </li>
-            <li>
-              <i class="day-icon" data-feather="cloud"></i
-              ><span class="day-name">Sun</span
-              ><span class="day-temp">7°C</span>
+            <li id="second-day">
+              <span id="day2" class="day-name">Sun</span>
+              <img
+                id="img2"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="weather-icon"
+                width="50px"
+              />
+              <span id="temp2" class="day-temp">9° 7°</span>
             </li>
-            <li>
-              <i class="day-icon" data-feather="cloud-snow"></i
-              ><span class="day-name">Mon</span
-              ><span class="day-temp">10°C</span>
+            <li id="third-day">
+              <span id="day3" class="day-name">Mon</span>
+              <img
+                id="img3"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="weather-icon"
+                width="50px"
+              />
+              <span id="temp3" class="day-temp">9° 7°</span>
             </li>
-            <li>
-              <i class="day-icon" data-feather="cloud-rain"></i
-              ><span class="day-name">Tue</span
-              ><span class="day-temp">11°C</span>
+            <li id="fourth-day">
+              <span id="day4" class="day-name">Tue</span>
+              <img
+                id="img4"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="weather-icon"
+                width="50px"
+              />
+              <span id="temp4" class="day-temp">9° 7°</span>
             </li>
             <div class="clear"></div>
           </ul>
@@ -103,13 +130,7 @@
       >
       by Code Ninja
     </div>
-    <span id="weather-icon">
-      <img
-      id="icon"
-        src="http://openweathermap.org/img/wn/10d@2x.png"
-        alt="weather-icon"
-      />
-    </span>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
